@@ -7,7 +7,7 @@ import { OrbitControls } from '@react-three/drei';
 import { useScroll, useSpring, useMotionValue, useTransform } from 'framer-motion';
 import { motion } from 'framer-motion-3d';
 
-export default function index() {
+export default function Index() {
 
     const container = useRef(null)
     const { scrollYProgress } = useScroll({
