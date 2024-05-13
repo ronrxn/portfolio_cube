@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef } from 'react'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-
+import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import styles from "./style.module.scss";
 import { OrbitControls } from '@react-three/drei';
 import { useScroll, useSpring, useMotionValue, useTransform } from 'framer-motion';
@@ -22,12 +22,12 @@ export default function Index() {
             <div className={styles.cube}>
                 <Canvas>
                     <OrbitControls enableZoom={false} enablePan={false} />
-                    <ambientLight intensity={2} />
-                    <directionalLight position={[2, 1, 1]} />
+                    <ambientLight intensity={1} />
+                    <directionalLight position={[1, 1, 1]} />
                     <Cube progress={smoothProgress}>
                     </Cube>
-                    {/* <Cube1 progress={smoothProgress} /> */}
                 </Canvas>
+                <a className='cv-moi' href='./CV.pdf' download>Télécharger mon CV</a>
             </div>
         </div>
     )
@@ -37,22 +37,16 @@ function Cube({ progress }) {
 
     const mesh = useRef(null)
 
+    const texture_1 = useLoader(TextureLoader, "/assets/romain-e.png")
+    const texture_2 = useLoader(TextureLoader, "/assets/IMG_6071.png")
+
     return (
         <motion.mesh ref={mesh} rotation-y={progress}>
             <boxGeometry args={[2.5, 2.5, 2.5]} />
-            <meshStandardMaterial color={"orange"} />
-        </motion.mesh>
-    )
-}
-
-function Cube1({ progress }) {
-
-    const mesh = useRef(null)
-
-    return (
-        <motion.mesh ref={mesh} rotation-y={progress}>
-            <boxGeometry args={[2.4, 2.51, 2.4]} />
-            <meshStandardMaterial color={"white"} />
+            <meshStandardMaterial map={texture_1} attach="material-4" />
+            <meshStandardMaterial map={texture_2} attach="material-1" />
+            <meshStandardMaterial color={"white"} attach="material-2" />
+            <meshStandardMaterial color={"white"} attach="material-3" />
         </motion.mesh>
     )
 }
