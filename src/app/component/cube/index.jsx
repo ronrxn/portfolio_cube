@@ -20,7 +20,7 @@ export default function Index() {
     return (
         <div ref={container} className={styles.main}>
             <div className={styles.cube}>
-                <Canvas linear>
+                <Canvas linear id='canva'>
                     <OrbitControls enableZoom={false} enablePan={false} />
                     <ambientLight intensity={2.5} />
                     <directionalLight position={[1, 1, 1]} />
@@ -30,9 +30,8 @@ export default function Index() {
                 {/* <a className='cv-moi' href='./CV.pdf' download>Télécharger mon CV</a> */}
             </div>
 
-            <div className='div'>
+            <div className='div-1'>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem atque quae animi praesentium neque necessitatibus natus quibusdam nulla dolores maxime earum, minima asperiores obcaecati quisquam maiores odit itaque deserunt tempora.</p>
-                <button id='close'>CLOSE</button>
             </div>
         </div>
     )
@@ -52,17 +51,19 @@ function Cube({ progress }) {
 
     return (
         <motion.mesh ref={mesh} rotation-y={progress}
-            onClick={(e) => {
+
+            onDoubleClick={(e) => {
                 if (e.faceIndex == 8 || e.faceIndex == 9) {
-                    var div = document.getElementsByClassName('div')[0]
-                    var close = document.getElementById('close')
-                    div.style.display = 'block'
-                    close.addEventListener('click', () => {
-                        div.style.display = 'none'
+                    var div = document.getElementsByClassName('div-1')[0]
+                    div.classList.add('div-1-display')
+                    div.addEventListener('click', () => {
+                        div.classList.remove('div-1-display')
                     })
+                 
                 } else {
                     console.log('autre')
                 }
+
             }}>
             <boxGeometry args={[2.5, 2.5, 2.5]} />
             <meshStandardMaterial map={texture_1} attach="material-4" toneMapped={false} />

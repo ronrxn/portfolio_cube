@@ -28,12 +28,22 @@ a {
     text-decoration: underline;
 }
 
-.div {
+.div-1 {
     display: none;
-    height: 30svh;
+    opacity: 0;
+    height: 55svh;
     width: 30svw;
     background-color: pink;
     position: fixed;
-    top: 40%;
-    left: 40%;
+    top: 22.5%;
+    left: 35%;
 }
+
+.div-1-display {  
+    display: block;
+    opacity: 1;
+}
+
+
+
+
