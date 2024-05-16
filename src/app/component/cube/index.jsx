@@ -31,7 +31,13 @@ export default function Index() {
             </div>
 
             <div className='div-1'>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem atque quae animi praesentium neque necessitatibus natus quibusdam nulla dolores maxime earum, minima asperiores obcaecati quisquam maiores odit itaque deserunt tempora.</p>
+                <p>1</p>
+            </div>
+            <div className='div-2'>
+                <p>2</p>
+            </div>
+            <div className='div-3'>
+                <p>3</p>
             </div>
         </div>
     )
@@ -53,15 +59,28 @@ function Cube({ progress }) {
         <motion.mesh ref={mesh} rotation-y={progress}
 
             onDoubleClick={(e) => {
-                if (e.faceIndex == 8 || e.faceIndex == 9) {
+            
+                if (e.faceIndex == 2 || e.faceIndex == 3) {
                     var div = document.getElementsByClassName('div-1')[0]
                     div.classList.add('div-1-display')
                     div.addEventListener('click', () => {
                         div.classList.remove('div-1-display')
                     })
-                 
-                } else {
-                    console.log('autre')
+                } else if (e.faceIndex == 10 || e.faceIndex == 11) {
+                    var div = document.getElementsByClassName('div-2')[0]
+                    div.classList.add('div-2-display')
+                    div.addEventListener('click', () => {
+                        div.classList.remove('div-2-display')
+                    })
+                } else if (e.faceIndex == 0 || e.faceIndex == 1) {
+                    var div = document.getElementsByClassName('div-3')[0]
+                    div.classList.add('div-3-display')
+                    div.addEventListener('click', () => {
+                        div.classList.remove('div-3-display')
+                    })
+                }
+                 else {
+                    console.log(e.faceIndex);
                 }
 
             }}>
@@ -75,3 +94,5 @@ function Cube({ progress }) {
         </motion.mesh>
     )
 }
+
+//4/5/6/7 on touche pas

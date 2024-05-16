@@ -29,17 +29,64 @@ a {
 }
 
 .div-1 {
+    background-color: white;
     display: none;
     opacity: 0;
     height: 55svh;
     width: 30svw;
-    background-color: pink;
+    border: 1px solid black;
     position: fixed;
     top: 22.5%;
     left: 35%;
 }
 
-.div-1-display {  
+.div-1-display { 
+    animation: fade-in 0.5s forwards;
+    display: block;
+    opacity: 1;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: rotate(180deg) scale(0.5, 1);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.div-2 {
+    background-color: white;
+    display: none;
+    opacity: 0;
+    height: 55svh;
+    width: 30svw;
+    border: 1px solid black;
+    position: fixed;
+    top: 22.5%;
+    left: 35%;
+}
+
+.div-2-display {  
+    display: block;
+    opacity: 1;
+}
+
+.div-3 {
+    background-color: white;
+    display: none;
+    opacity: 0;
+    height: 55svh;
+    width: 30svw;
+    border: 1px solid black;
+    position: fixed;
+    top: 22.5%;
+    left: 35%;
+}
+
+.div-3-display {  
     display: block;
     opacity: 1;
 }
