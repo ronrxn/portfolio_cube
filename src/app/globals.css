@@ -30,9 +30,10 @@ a {
 
 .div {
     display: none;
-    height: 500px;
-    width: 500px;
-    background-color: black;
+    height: 30svh;
+    width: 30svw;
+    background-color: pink;
     position: absolute;
-    top: 0;
+    top: 40%;
+    left: 40%;
 }

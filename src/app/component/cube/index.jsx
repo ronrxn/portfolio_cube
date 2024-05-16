@@ -31,7 +31,8 @@ export default function Index() {
             </div>
 
             <div className='div'>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolores a iste corrupti in eos, adipisci beatae et ut repellendus reiciendis nemo temporibus rerum amet excepturi, tempore ducimus quod omnis?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem atque quae animi praesentium neque necessitatibus natus quibusdam nulla dolores maxime earum, minima asperiores obcaecati quisquam maiores odit itaque deserunt tempora.</p>
+                <button id='close'>CLOSE</button>
             </div>
         </div>
     )
@@ -54,7 +55,11 @@ function Cube({ progress }) {
             onClick={(e) => {
                 if (e.faceIndex == 8 || e.faceIndex == 9) {
                     var div = document.getElementsByClassName('div')[0]
+                    var close = document.getElementById('close')
                     div.style.display = 'block'
+                    close.addEventListener('click', () => {
+                        div.style.display = 'none'
+                    })
                 } else {
                     console.log('autre')
                 }
