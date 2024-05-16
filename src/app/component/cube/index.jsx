@@ -19,8 +19,8 @@ export default function Index() {
 
     return (
         <div ref={container} className={styles.main}>
-            <div className={styles.cube}>
-                <Canvas linear id='canva'>
+            <div className={styles.cube} id='canva'>
+                <Canvas linear>
                     <OrbitControls enableZoom={false} enablePan={false} />
                     <ambientLight intensity={2.5} />
                     <directionalLight position={[1, 1, 1]} />
@@ -59,23 +59,24 @@ function Cube({ progress }) {
         <motion.mesh ref={mesh} rotation-y={progress}
 
             onDoubleClick={(e) => {
-            
+                var canva = document.getElementById('canva')
+
                 if (e.faceIndex == 2 || e.faceIndex == 3) {
                     var div = document.getElementsByClassName('div-1')[0]
                     div.classList.add('div-1-display')
-                    div.addEventListener('click', () => {
+                    canva.addEventListener('click', () => {
                         div.classList.remove('div-1-display')
                     })
                 } else if (e.faceIndex == 10 || e.faceIndex == 11) {
                     var div = document.getElementsByClassName('div-2')[0]
                     div.classList.add('div-2-display')
-                    div.addEventListener('click', () => {
+                    canva.addEventListener('click', () => {
                         div.classList.remove('div-2-display')
                     })
                 } else if (e.faceIndex == 0 || e.faceIndex == 1) {
                     var div = document.getElementsByClassName('div-3')[0]
                     div.classList.add('div-3-display')
-                    div.addEventListener('click', () => {
+                    canva.addEventListener('click', () => {
                         div.classList.remove('div-3-display')
                     })
                 }

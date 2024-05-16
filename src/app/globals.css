@@ -28,77 +28,6 @@ a {
     text-decoration: underline;
 }
 
-@media screen and (min-width:1000px) {
-
-    @keyframes fade-in {
-        0% {
-            opacity: 0;
-            transform: rotate(180deg) scale(0.5, 1);
-        }
-    
-        100% {
-            opacity: 1;
-        }
-    }
-    
-    .div-1 {
-        background-color: white;
-        display: none;
-        opacity: 0;
-        height: 50svh;
-        width: 90svw;
-        border: 1px solid black;
-        position: fixed;
-        top: 22.5%;
-        left: 35%;
-    }
-    
-    .div-1-display { 
-        animation: fade-in 0.5s forwards;
-        display: block;
-        opacity: 1;
-    }
-    
-    
-    
-    .div-2 {
-        background-color: white;
-        display: none;
-        opacity: 0;
-        height: 50svh;
-        width: 90svw;
-        border: 1px solid black;
-        position: fixed;
-        top: 22.5%;
-        left: 35%;
-    }
-    
-    .div-2-display {  
-        animation: fade-in 0.5s forwards;
-        display: block;
-        opacity: 1;
-    }
-    
-    .div-3 {
-        background-color: white;
-        display: none;
-        opacity: 0;
-        height: 50svh;
-        width: 90svw;
-        border: 1px solid black;
-        position: fixed;
-        top: 22.5%;
-        left: 35%;
-    }
-    
-    .div-3-display {  
-        animation: fade-in 0.5s forwards;
-        display: block;
-        opacity: 1;
-    }
-}
-
-
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -166,6 +95,73 @@ a {
     opacity: 1;
 }
 
+@media screen and (max-width:1000px) {
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: rotate(180deg) scale(0.5, 1);
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .div-1 {
+        background-color: white;
+        display: none;
+        opacity: 0;
+        height: 60svh;
+        width: 90svw;
+        border: 1px solid black;
+        position: fixed;
+        top: 20%;
+        left: 5%;
+    }
+    
+    .div-1-display { 
+        animation: fade-in 0.5s forwards;
+        display: block;
+        opacity: 1;
+    }
+    
+    .div-2 {
+        background-color: white;
+        display: none;
+        opacity: 0;
+        height: 60svh;
+        width: 90svw;
+        border: 1px solid black;
+        position: fixed;
+        top: 20%;
+        left: 5%;
+    }
+    
+    .div-2-display {  
+        animation: fade-in 0.5s forwards;
+        display: block;
+        opacity: 1;
+    }
+    
+    .div-3 {
+        background-color: white;
+        display: none;
+        opacity: 0;
+        height: 60svh;
+        width: 90svw;
+        border: 1px solid black;
+        position: fixed;
+        top: 20%;
+        left: 5%;
+    }
+    
+    .div-3-display {  
+        animation: fade-in 0.5s forwards;
+        display: block;
+        opacity: 1;
+    }
+}
 
 
 
