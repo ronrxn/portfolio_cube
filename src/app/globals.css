@@ -27,3 +27,12 @@ a {
     background-color: #0056b3;
     text-decoration: underline;
 }
+
+.div {
+    display: none;
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}

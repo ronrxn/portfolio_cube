@@ -20,14 +20,18 @@ export default function Index() {
     return (
         <div ref={container} className={styles.main}>
             <div className={styles.cube}>
-                <Canvas toneMapped={false} antialias={true} linear>
+                <Canvas linear>
                     <OrbitControls enableZoom={false} enablePan={false} />
                     <ambientLight intensity={2.5} />
                     <directionalLight position={[1, 1, 1]} />
                     <Cube progress={smoothProgress}>
                     </Cube>
                 </Canvas>
-                <a className='cv-moi' href='./CV.pdf' download>Télécharger mon CV</a>
+                {/* <a className='cv-moi' href='./CV.pdf' download>Télécharger mon CV</a> */}
+            </div>
+
+            <div className='div'>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolores a iste corrupti in eos, adipisci beatae et ut repellendus reiciendis nemo temporibus rerum amet excepturi, tempore ducimus quod omnis?</p>
             </div>
         </div>
     )
@@ -46,14 +50,22 @@ function Cube({ progress }) {
     const texture_6 = useLoader(TextureLoader, "/assets/IMG_6071.png")
 
     return (
-        <motion.mesh ref={mesh} rotation-y={progress}>
+        <motion.mesh ref={mesh} rotation-y={progress}
+            onClick={(e) => {
+                if (e.faceIndex == 8 || e.faceIndex == 9) {
+                    var div = document.getElementsByClassName('div')[0]
+                    div.style.display = 'block'
+                } else {
+                    console.log('autre')
+                }
+            }}>
             <boxGeometry args={[2.5, 2.5, 2.5]} />
             <meshStandardMaterial map={texture_1} attach="material-4" toneMapped={false} />
-            <meshStandardMaterial map={texture_2} attach="material-1" />
-            <meshStandardMaterial map={texture_3} attach="material-2" />
-            <meshStandardMaterial map={texture_4} attach="material-3" />
-            <meshStandardMaterial map={texture_5} attach="material-0" />
-            <meshStandardMaterial map={texture_6} attach="material-5" />
+            <meshStandardMaterial map={texture_2} attach="material-1" toneMapped={false} />
+            <meshStandardMaterial map={texture_3} attach="material-2" toneMapped={false} />
+            <meshStandardMaterial map={texture_4} attach="material-3" toneMapped={false} />
+            <meshStandardMaterial map={texture_5} attach="material-0" toneMapped={false} />
+            <meshStandardMaterial map={texture_6} attach="material-5" toneMapped={false} />
         </motion.mesh>
     )
 }
