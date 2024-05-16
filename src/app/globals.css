@@ -33,7 +33,7 @@ a {
     height: 30svh;
     width: 30svw;
     background-color: pink;
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: 40%;
 }
