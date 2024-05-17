@@ -10,7 +10,7 @@ a {
 }
 
 #cv-moi {
-    display:none;
+    display: none;
 }
 
 .card {
@@ -83,7 +83,10 @@ a {
     width: 100%;
 }
 
-
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
 
 @media screen and (max-width:1000px) {
 
@@ -96,6 +99,11 @@ a {
         100% {
             opacity: 1;
         }
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        filter: invert(100%);
     }
 
     .card {

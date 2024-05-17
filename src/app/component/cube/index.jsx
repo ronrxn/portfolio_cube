@@ -2,7 +2,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 import React, { useRef, useState } from 'react'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
@@ -43,7 +42,7 @@ export default function Index() {
                             <Image className="image" src="/assets/puissance-4.png" alt='' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className="image" src="/assets/puissance-4.png" alt='' />
+                            <Image className="image" src="/assets/apilol.png" alt='' />
                         </Carousel.Item>
                         <Carousel.Item>
                             <Image className="image" src="/assets/cube-portfolio.png" alt='' />
