@@ -9,23 +9,8 @@ a {
     transition: color 0.3s ease;
 }
 
-.cv-moi {
-    position: absolute;
-    float: left;
-    top: 2svh;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: #f8f9fa;
-    padding: .5rem 1rem;
-    margin-left: 1rem;
-    border-radius: 5px;
-    border: 1px solid #dee2e6;
-}
-
-.cv-moi:hover {
-    color: #fff;
-    background-color: #0056b3;
-    text-decoration: underline;
+#cv-moi {
+    display:none;
 }
 
 .card {

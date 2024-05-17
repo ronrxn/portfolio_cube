@@ -23,12 +23,6 @@ export default function Index() {
     const progress = useTransform(scrollYProgress, [0, 1], [0, 6.3])
     const smoothProgress = useSpring(progress, { damping: 20 });
 
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex) => {
-        setIndex(selectedIndex);
-    }
-
     return (
         <div ref={container} className={styles.main}>
             <div className={styles.cube} id='canva'>
@@ -39,27 +33,26 @@ export default function Index() {
                     <Cube progress={smoothProgress}>
                     </Cube>
                 </Canvas>
-                {/* <a className='cv-moi' href='./CV.pdf' download>Télécharger mon CV</a> */}
+                <a id='cv-moi' href='./CV.pdf' download>Télécharger mon CV</a>
             </div>
 
             <div className='div-1 div-1-hidden'>
                 <Card className='card'>
-                    <Carousel activeIndex={index} onSelect={handleSelect}>
+                    <Carousel>
                         <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
+                            <Image className="image" src="/assets/puissance-4.png" alt='' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
+                            <Image className="image" src="/assets/puissance-4.png" alt='' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
+                            <Image className="image" src="/assets/cube-portfolio.png" alt='' />
                         </Carousel.Item>
                     </Carousel>
                     <Card.Body>
-                        <Card.Title>1</Card.Title>
+                        <Card.Title>Javascript</Card.Title>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the content.
+                            Quelques projets en JS, un puissance 4 en vanilla, un site utilisant une API de League of legends en React et enfin mon portfolio cube en Nextjs.
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -67,7 +60,7 @@ export default function Index() {
 
             <div className='div-2 div-2-hidden'>
                 <Card className='card'>
-                    <Carousel activeIndex={index} onSelect={handleSelect}>
+                    <Carousel>
                         <Carousel.Item>
                             <Image className="image" src="/assets/IMG_6071.png" alt='' />
                         </Carousel.Item>
@@ -90,7 +83,7 @@ export default function Index() {
 
             <div className='div-3 div-3-hidden'>
                 <Card className='card'>
-                    <Carousel activeIndex={index} onSelect={handleSelect}>
+                    <Carousel>
                         <Carousel.Item>
                             <Image className="image" src="/assets/IMG_6071.png" alt='' />
                         </Carousel.Item>
@@ -120,11 +113,11 @@ function Cube({ progress }) {
 
 
     const texture_1 = useLoader(TextureLoader, "/assets/romain-e.jpg")
-    const texture_2 = useLoader(TextureLoader, "/assets/IMG_6071.png")
-    const texture_3 = useLoader(TextureLoader, "/assets/IMG_6071.png")
-    const texture_4 = useLoader(TextureLoader, "/assets/ok-cat.png")
-    const texture_5 = useLoader(TextureLoader, "/assets/IMG_6071.png")
-    const texture_6 = useLoader(TextureLoader, "/assets/IMG_6071.png")
+    const texture_2 = useLoader(TextureLoader, "/assets/Javascript.png")
+    const texture_3 = useLoader(TextureLoader, "/assets/dl-cv.png")
+    const texture_4 = useLoader(TextureLoader, "/assets/logoronronzer.png")
+    const texture_5 = useLoader(TextureLoader, "/assets/SQL.png")
+    const texture_6 = useLoader(TextureLoader, "/assets/PHP.png")
 
     return (
         <motion.mesh ref={mesh} rotation-y={progress}
@@ -156,6 +149,9 @@ function Cube({ progress }) {
                         div.classList.add('div-3-hidden')
                         div.classList.remove('div-3-display')
                     })
+                } else if (e.faceIndex == 4 || e.faceIndex == 5){
+                    var cv = document.getElementById('cv-moi')
+                    cv.click()
                 }
                 else {
                     console.log(e.faceIndex);
