@@ -62,20 +62,16 @@ export default function Index() {
                 <Card className='card'>
                     <Carousel>
                         <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
+                            <Image className="image" src="/assets/cinema.png" alt='' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
+                            <Image className="image" src="/assets/quizv2.png" alt='' />
                         </Carousel.Item>
                     </Carousel>
                     <Card.Body>
-                        <Card.Title>2</Card.Title>
+                        <Card.Title>PHP</Card.Title>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the content.
+                            Une partie de mon projet cinema et le projet my_quiz fait en Symfony (ici le choix de la catégorie du quiz, la partie incription ainsi que le début du profil).
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -85,20 +81,16 @@ export default function Index() {
                 <Card className='card'>
                     <Carousel>
                         <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
+                            <Image className="image" src="/assets/cinemav2.png" alt='' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <Image className="image" src="/assets/IMG_6071.png" alt='' />
+                            <Image className="image" src="/assets/quiz.png" alt='' />
                         </Carousel.Item>
                     </Carousel>
                     <Card.Body>
-                        <Card.Title>3</Card.Title>
+                        <Card.Title>SQL</Card.Title>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the content.
+                            La partie CRUD (Create, Read, Update and Delete) de mon projet cinéma et un des affichages des quiz du projet my_quiz, le tout récupéré de différentes bases de données sql.
                         </Card.Text>
                     </Card.Body>
                 </Card>
