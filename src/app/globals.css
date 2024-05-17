@@ -4,9 +4,9 @@ body {
 }
 
 a {
-    text-decoration: none; 
-    color: #007BFF; 
-    transition: color 0.3s ease; 
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
 }
 
 .cv-moi {
@@ -28,10 +28,14 @@ a {
     text-decoration: underline;
 }
 
+.card {
+    width: 30svw;
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;
-        transform: rotate(180deg) scale(0.5, 1);
+        transform: scale(0.5);
     }
 
     100% {
@@ -40,128 +44,121 @@ a {
 }
 
 .div-1 {
-    background-color: white;
-    display: none;
-    opacity: 0;
-    height: 55svh;
-    width: 30svw;
-    border: 1px solid black;
     position: fixed;
-    top: 22.5%;
+    top: 15%;
     left: 35%;
 }
 
-.div-1-display { 
+.div-1-display {
     animation: fade-in 0.5s forwards;
     display: block;
     opacity: 1;
 }
 
-
+.div-1-hidden {
+    display: none;
+    opacity: 0;
+}
 
 .div-2 {
-    background-color: white;
-    display: none;
-    opacity: 0;
-    height: 55svh;
-    width: 30svw;
-    border: 1px solid black;
     position: fixed;
-    top: 22.5%;
+    top: 15%;
     left: 35%;
 }
 
-.div-2-display {  
+.div-2-display {
     animation: fade-in 0.5s forwards;
     display: block;
     opacity: 1;
+}
+
+.div-2-hidden {
+    display: none;
+    opacity: 0;
 }
 
 .div-3 {
-    background-color: white;
-    display: none;
-    opacity: 0;
-    height: 55svh;
-    width: 30svw;
-    border: 1px solid black;
     position: fixed;
-    top: 22.5%;
+    top: 15%;
     left: 35%;
 }
 
-.div-3-display {  
+.div-3-display {
     animation: fade-in 0.5s forwards;
     display: block;
     opacity: 1;
 }
+
+.div-3-hidden {
+    display: none;
+    opacity: 0;
+}
+
+.image {
+    width: 100%;
+}
+
+
 
 @media screen and (max-width:1000px) {
 
     @keyframes fade-in {
         0% {
             opacity: 0;
-            transform: rotate(180deg) scale(0.5, 1);
+            transform: scale(0.5);
         }
-    
+
         100% {
             opacity: 1;
         }
     }
-    
+
+    .card {
+        width: 90svw;
+    }
+
     .div-1 {
-        background-color: white;
-        display: none;
-        opacity: 0;
-        height: 60svh;
-        width: 90svw;
-        border: 1px solid black;
         position: fixed;
         top: 20%;
         left: 5%;
     }
-    
-    .div-1-display { 
+
+    .div-1-display {
         animation: fade-in 0.5s forwards;
         display: block;
         opacity: 1;
     }
-    
+
+    .div-1-hidden {
+        display: none;
+        opacity: 0;
+    }
+
     .div-2 {
-        background-color: white;
-        display: none;
-        opacity: 0;
-        height: 60svh;
-        width: 90svw;
-        border: 1px solid black;
         position: fixed;
         top: 20%;
         left: 5%;
     }
-    
-    .div-2-display {  
+
+    .div-2-display {
         animation: fade-in 0.5s forwards;
         display: block;
         opacity: 1;
     }
-    
-    .div-3 {
-        background-color: white;
+
+    .div-2-hidden {
         display: none;
         opacity: 0;
-        height: 60svh;
-        width: 90svw;
-        border: 1px solid black;
+    }
+
+    .div-3 {
         position: fixed;
         top: 20%;
         left: 5%;
     }
-    
-    .div-3-display {  
-        animation: fade-in 0.5s forwards;
+
+    .div-3-display {
         display: block;
         opacity: 1;
     }
 }
-
-
-
