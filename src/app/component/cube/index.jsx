@@ -32,7 +32,7 @@ export default function Index() {
                     <Cube progress={smoothProgress}>
                     </Cube>
                 </Canvas>
-                <a id='cv-moi' href='./CV-Romain-Equoy.pdf' download>Télécharger mon CV</a>
+                <a id='cv-moi' href='./CV-Romain-Equoy-WEB.pdf' download>Télécharger mon CV</a>
             </div>
 
             <div className='div-1 div-1-hidden'>
